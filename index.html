@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html>
+
+    <head>
+        <!--meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"-->
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/hangman.js"></script>        
+        <script src="js/prototypes.js"></script>
+        <script src="js/languages.js"></script>
+        <script src="js/dictionary.js"></script>
+        <script src="js/obfuscator.js"></script>
+        <script src="js/dom.js"></script>
+        <script src="js/scenes.js"></script>
+        <script src="js/draw.js"></script>
+        <script src="js/game.js"></script>
+        <script src="js/listeners.js"></script>
+    </head>
+
+    <body id="scenes">
+
+        <div id="sceneNewGame" class="overlay">
+            <div class="newGame">
+                <h1 id="newGameTitle"></h1>
+                <p><button id="startGameButton"></button></p>
+            </div>
+        </div>
+
+        <div id="sceneAskForWord" class="overlay">
+            <div class="formContainer">
+                <form id="wordForm">
+                    <h1 id="askForWordTitle"></h1>
+                    <input id="secretWordInput" name="secretWordInput" type="text" value="" required autocomplete="off"><br>                    
+                    <select id="languageSelect"></select>
+                    <button id="nextButton" type="submit"></button>
+                </form>
+            </div>
+        </div>
+
+        <div id="sceneShareOrPlay" class="overlay">
+            <div class="shareOrPlay">
+                <h1 id="shareOrPlayTitle"></h1>
+                <p><button id="shareButton"></button></p>
+                <p id="shareResult"></p>
+                <p><button id="playButton"></button></p>
+                <p><button id="restartButton"class="restart"></button></p>
+            </div>
+        </div>
+
+        <div id="sceneNewSharedGame" class="overlay">
+            <div class="newSharedGame">
+                <h1 id="newSharedGameTitle"></h1>
+                <p><button id="startSharedGameButton"></button></p>
+            </div>
+        </div>
+
+        <div id="sceneGamePlay">
+            <div id="guessLetterInputContainer">
+                <input id="guessLetterInput" type="text"></input>
+            </div>
+            <canvas>Your browser does not support the HTML5 canvas tag.</canvas>
+            <div id="hiddenLetterContainer"></div>
+            <div id="guessedLetterContainer"></div>
+        </div>
+
+        <div id="sceneGameWon" class="overlay">
+            <div class="gameEndSuccess">
+                <img src="img/winner.png" alt="I'm the winner!">
+                <h1 id="gameEndSuccessTitle"></h1>
+                <p><button id="playAgainButton" class="restart"></button></p>
+            </div>
+        </div>
+
+        <div id="sceneGameOver" class="overlay">
+            <div class="gameEndFailed">
+                <img src="img/rip.png" alt="It's game over man, game over!">
+                <h1 id="gameEndFailedTitle"></h1>
+                <h2 id="discloseWord"></h2>
+                <p><button id="tryAgainButton" class="restart"></button></p>
+            </div>
+        </div>
+
+        </div>
+
+    </body>
+</html>
